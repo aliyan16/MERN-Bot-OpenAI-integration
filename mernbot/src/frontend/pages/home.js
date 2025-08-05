@@ -8,7 +8,7 @@ function Summarizer() {
   const handleSummarize = async () => {
     try {
       const response = await axios.post('http://localhost:5000/api/openai/summarize', { userInput:text });
-      setSummary(response.data.summary);
+      setSummary(response.data.result);
     } catch (err) {
       console.error(err);
       alert('Something went wrong.');
