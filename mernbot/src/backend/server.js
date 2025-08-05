@@ -1,7 +1,7 @@
 const express=require('express')
 const bodyParser=require('body-parser')
 const cors=require('cors')
-require('dotenv').config()
+require('dotenv').config({path:__dirname+'/.env'})
 
 const openAiRoutes=require('../models/routes/openai')
 
@@ -10,7 +10,7 @@ const app=express()
 app.use(cors())
 app.use(bodyParser.json())
 
-app.use('api/openai',openAiRoutes)
+app.use('/api/openai',openAiRoutes)
 
 
 

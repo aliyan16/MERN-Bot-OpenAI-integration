@@ -1,9 +1,10 @@
 import './App.css';
+import Summarizer from './frontend/pages/home';
 
 function App() {
   return (
     <>
-    hi
+    <Summarizer/>
     </>
   );
 }
